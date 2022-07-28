@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando estilost</title>
+
+    <script>
+    function mudarCor(cor){
+    document.getElementById('div').style.background = cor
+
+
+
+        }
+
+    </script>
+</head>
+<body>
+
+   <div id="div" style="border: 3px solid black ; width: 100px; height: 100px;"></div>
+
+   <button onclick="mudarCor('#FF0000')"> VERMELHO</button>
+   <button onclick="mudarCor('#00FF00')"> VERDE</button>
+   <button onclick="mudarCor('#0000FF')"> AZUL</button>
+    
+    
+</body>
+</html>

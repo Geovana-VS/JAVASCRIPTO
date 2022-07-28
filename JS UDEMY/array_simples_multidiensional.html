@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array simples e multidimencional</title>
+
+    
+</head>
+
+<body>
+    <h3>Retornando Ìndics especificos do Array</h3>
+    <div style="border: 2px solid black; width:300px; height: auto; ">
+        <h4>frutas verelhas </h4>
+       
+        <p id="fruta_red"></p>
+    </div>
+    <div style="border: 2px solid black ;width:300px; height: auto;">
+        <h4>frutas amarelas </h4>
+        <span id="fruta_yellow"></span>
+    </div>
+
+
+     <h3>Retornando Array original e Array ordenado</h3>
+    <div style="border: 2px solid black; width:300px; height: auto; ">
+       <span id="array_original"></span>
+    </div>
+    <div style="border: 2px solid black; width:300px; height: auto; ">
+        <span id="array_ordenado "></span>
+    </div>
+
+
+    <script>
+
+
+            //array simples com id estipulado 
+            var frutas = Array()
+            frutas[1] = 'banana'
+            console.log()
+            
+            //array simples com id estipulado 
+            var doces = Array('bolo de milho')
+            console.log()
+
+            //array multidmesional 
+            var lista_de_coisas = Array()
+            lista_de_coisas ['frutas_vermelhas'] = Array()
+            lista_de_coisas ['frutas_vermelhas'] [1]= 'maça'
+            lista_de_coisas ['frutas_vermelhas'] [2]= 'morango'
+         
+         
+            lista_de_coisas ['frutas_amarelas'] = Array()
+            lista_de_coisas ['frutas_amarelas'] [1] = 'banana'
+            lista_de_coisas ['frutas_amarelas'] [2] = 'limao siciliano'
+
+
+
+            //inclui elemento no inicio do array
+            lista_de_coisas['frutas_vermelhas'].unshift('cereja')
+            lista_de_coisas['frutas_amarelas'].unshift('maracujá')
+
+
+            //inclui elementos no final do array 
+            lista_de_coisas['frutas_vermelhas'].push('amora')
+            lista_de_coisas['frutas_amarelas'].push('melão')
+
+
+
+            //excluir elemento n fina do array
+            lista_de_coisas['frutas_vermelhas'].pop()
+            lista_de_coisas['frutas_amarelas'].pop()
+            //excluir elemento n inicio do array
+            lista_de_coisas['frutas_vermelhas'].shift()
+            lista_de_coisas['frutas_amarelas'].shift(
+                
+            )
+
+            console.log(lista_de_coisas)
+          
+            var fruta_red = (lista_de_coisas['frutas_amarelas'][1])
+            var fruta_yellow = (lista_de_coisas['frutas_vermelhas'][1])
+
+            console.log(fruta_red,fruta_yellow)
+
+            document.getElementById('fruta_red').innerHTML = fruta_red
+            document.getElementById('fruta_yellow').innerHTML = fruta_yellow
+
+
+            //Ordenando Arrey
+
+            var numeros = Array()
+            numeros[0] = 45
+            numeros[1] = 35
+            numeros[2] = 85
+            numeros[3] = 05
+
+            document.getElementById('array_original').innerHTML = numeros
+            console.log(numeros)
+
+           document.getElementById('array_ordenado')(numeros.sort( ordenarNumeros))
+
+
+            function ordenarNumeros(a,b){
+                return a - b
+
+                //aqui a funcao ira comprar de forma sequencial cada elemento do array, irá pegaro primeiro valor e subtrair o segundo
+                // se  a - b resultar em um valor inferior  0 então o numero contido na posição A permanecerá antes de B,
+                // se A - B resultar  e u valor superior a 0 entao o valoer de B passára para frente do valor de A
+
+            }
+
+            //document.getElementById('array_ordenado').innerHTML = (numeros.sort())
+
+
+            var nomes = Array()
+            nomes[0] = 'Geovana'
+            nomes[1] = 'Bruna'
+            nomes[2] = 'Vitória'
+            nomes[3] = 'Katia'
+    
+           // document.getElementById('array_original').innerHTML = nomes
+
+            console.log(nomes)
+            var nomes_ordenados = (nomes.sort())
+            console.log(nomes_ordenados)
+
+           // document.getElementById('array_ordenado').innerHTML = nomes_ordenados
+
+        
+        
+        
+
+
+    </script>
+    
+</body>
+</html>

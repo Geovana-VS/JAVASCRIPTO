@@ -1,0 +1,41 @@
+
+body{
+    font-weight: bolder;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+div{
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    padding: 35px;
+    margin: 10px;
+}
+.onclick{
+  background-color: aqua;
+  color: black;
+
+
+}
+
+
+.ondblclick{
+    background-color: blueviolet;
+    color: whitesmoke;
+   
+}
+.onmouseup{
+    background-color: brown;
+    color: whitesmoke;
+   
+}
+.onmouseover{
+    background-color: aquamarine;
+    color: black;
+   
+}
+
+.onmouseout{
+    background-color: green;
+    color: whitesmoke;
+}

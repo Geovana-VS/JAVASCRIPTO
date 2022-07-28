@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio</title>
+
+    <style>
+        .alert{
+            border: 2px solid red;
+        }
+
+        .msg_alert{
+            color: red;
+        }
+
+    </style>
+    
+</head>
+
+<body>
+
+     <div>
+       <input id="conteudo_input" placeholder="digite uma fruta">
+       <span class="msg_alert" id="msg_erro"></span>
+     </div>
+    <button onclick="incluirItem()">Adicionar</button>
+    <button onclick="ordenarItens()">Ordenar</button><br>
+
+    <span id="itens_ordenados"></span>
+
+
+    <script>
+        var itens = Array()
+        var iten = ''
+        var i = 0
+
+        function incluirItem() {
+            document.getElementById('msg_erro').innerHTML = ''
+            iten = document.getElementById('conteudo_input').value
+            if ( itens.indexOf(iten) === -1){
+               itens[i]= document.getElementById('conteudo_input').value
+            }else
+               document.getElementById('msg_erro').innerHTML = 'Esse ítem já existe na lista !'
+               document.getElementById('conteudo_input').value = ''
+               i++
+        }
+
+        function ordenarItens() {
+            console.log(itens.sort())
+            document.getElementById('itens_ordenados').innerHTML = itens.sort()
+        }
+    </script>
+
+</body>
+
+
+
+</html>

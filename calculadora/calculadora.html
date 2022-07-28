@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="style_calculadora.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="base container ">
+        <div class="visor container">
+          <span id="visor" id="visor2"></span>
+        </div><br>
+        <div class="row container">
+             <div class = "row btn_extras " >
+                <div class = "col ">
+                   <bUtton  onclick="limparTela()">C</bUtton>
+               </div>
+               <div class = "col">
+                 <bUtton  onclick="exibirResultados()"><img src="img/lista.png" alt=""></bUtton>
+              </div>
+          </div>
+
+            <div class="col">
+                <button onclick="inserirNumero('7')">7</button>
+            </div>
+            <div class="col">
+               <button onclick="inserirNumero('8')"> 8 </button>
+            </div>
+            <div class="col">
+               <button onclick="inserirNumero('9')"> 9 </button>
+            </div>
+            <div class="col">
+                <button onclick="colocarOperacao('/')"  class="caracter_especial"> &divide; </button>
+            </div>
+        </div>
+
+        <div class="row container">
+            <div class="col">
+              <button onclick="inserirNumero('4')"> 4</button>
+            </div>
+            <div class="col">
+               <button onclick="inserirNumero('5')"> 5 </button>
+            </div>
+            <div class="col">
+               <button onclick="inserirNumero('6')"> 6 </button>
+            </div>
+            <div class="col">
+                <button onclick="colocarOperacao('*')"> X </button>
+            </div>
+        </div>
+
+        <div class="row container">
+            <div class="col">
+               <button onclick="inserirNumero('1')"> 1 </button>
+            </div>
+            <div class="col">
+              <button onclick="inserirNumero('2')"> 2 </button>
+            </div>
+            <div class="col">
+              <button onclick="inserirNumero('3')"> 3 </button>
+             </div>
+            <div class="col">
+                 <button onclick="colocarOperacao('-')" class="caracter_especial"> - </button>
+            </div>
+        </div>
+
+        <div class="row container">
+            <div class="col-6">
+              <button onclick="inserirNumero('0')"> 0 </button>
+            </div>
+            <div class="col">
+              <button onclick="inserirNumero('.')"> . </button>
+            </div>
+            <div class="col">
+               <button onclick="colocarOperacao('+')"> + </button>
+            </div>
+            <div class="col">
+                    <button onclick="processarResultado()"> = </button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.calculadora.js"></script>
+</body>
+
+</html>
