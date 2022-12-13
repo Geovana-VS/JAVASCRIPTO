@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--CSS-->
+    <style>
+        .erro{
+            color: red;
+            
+        }
+        .sucesso{
+            color: green;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <title>Trtamento de erro</title>
+
+    <script>
+
+            // Aqui nessa função peguei um input do DOM  e na coparação tratamos um erro usando...
+            function pesquisarNum(){
+
+               var num = parseInt(document.getElementById("n").value)
+               console.log(typeof(num))
+
+               /*try que  testa o erro , ele pede para o algoritimo testa se a a var num que recebeu
+               o input é maior que 10*/
+               try{
+                // se for, é criada uma excessão  com o throw que gera um new objeto de Error e atribui uma stringpara sr exibida
+                 if (num > 10){ 
+                    throw new Error ("O número não pode ser maior que 10");
+                }
+                document.getElementById("erro").className = "sucesso"
+                document.getElementById("erro").innerHTML =("<br>"+num+" é um numero valido")
+                // o bloco Catch ira ser acionado caso a execão do try seja processada ou seja se o erro não ocorrer esse bloco será ignorado 
+               }catch(e){
+                   document.getElementById("erro").innerHTML = ("<br/>" + e.message);
+                   
+
+              }
+
+            }
+
+
+
+        
+            
+         
+         
+        
+         
+        
+
+       
+         </script>
+</head>
+<body class="container">
+    <div class="position-relative">
+        <div class="position-absolute top-0 start-50 translate-middle-x">
+            <input placeholder="Digite um número" id="n" >
+            <button onclick="pesquisarNum()">Pesquisar</button>  
+            <span class="erro" id="erro"></span>
+        </div>
+    </div>
+   
+    
+</body>
+</html>

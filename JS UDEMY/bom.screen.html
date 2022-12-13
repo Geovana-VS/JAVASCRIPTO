@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM screent</title>
+   
+
+</head>
+<body>
+    <h1>Potencial dessa tela </h1>
+    <p id="pxalt"></p>
+    <p id = "pxlarg"></p>
+    
+</body>
+<script>
+    largura = screen.availWidth
+    altura = screen.availHeight
+    document.getElementById('pxlarg').innerHTML =("O potencial de largura deste browser e de "+largura )
+
+    document.getElementById('pxalt').innerHTML = ("O potencial de altura deste browser e de "+altura )
+</script>
+
+</html>

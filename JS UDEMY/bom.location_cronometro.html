@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <title>BOM location</title>
+
+    <style>
+       .cronometro{
+        border: 3px solid green;
+        max-width: 400px;
+        text-align: center;
+       }
+
+       .teste{
+        border: 3px solid  red;
+       }
+    </style>
+
+
+    <script>
+        var ss = 0;
+        var mm = 0;
+        var hh = 0;
+        var tempo = 100; // quantos milesemos tem um segundo
+        cron;
+
+        function start(){
+           cron =  setInterval(timer,tempo );
+
+        }
+        function pause(){
+           clearInterval(cron);
+          
+        }
+        function reiniciar(){
+            location.reload(); 
+        }
+        function timer (){
+
+            ss++;
+
+            if(ss == 60){
+                ss = 0;
+                mm++;
+                if(mm == 60){
+                    mm = 0
+                    hh++
+                }
+            }
+
+           document.getElementById('visor').innerText = (hh>10?"0"+hh:hh) + ":" + (mm<10? "0"+mm:mm)+":"+(ss <10 ? "0"+ss:ss)
+
+        }
+        
+       
+    </script>
+</head>
+<body class="container">
+    <div class="cronometro container">
+        <div class="row">
+            <div class="col teste ">
+                <button type="button" class="btn btn-success" onclick="start()">START</button>
+            </div>
+            <div class="col teste">
+                <button type="button" class="btn btn-danger" onclick="pause()">PAUSE</button>
+            </div>
+            <div class="col teste">
+                <button type="button" class="btn btn-warning" onclick="reiniciar()">REINICIAR</button>
+            </div>
+            <div class="row">
+               <p id="visor"></p>
+            </div>
+
+        </div>
+    </div>
+
+
+    
+    
+</body>
+</html>

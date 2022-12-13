@@ -1,0 +1,105 @@
+html{
+    cursor:url(imagens/mata_mosquito.png)30 30, auto;
+}
+
+body{
+    background-image: url(imagens/bg.jpg);
+    background-repeat: no-repeat;
+    background-size:100%;
+    height: 100%;
+    background-position: center;
+}
+ 
+
+
+  
+
+.boso0{
+    width: 100px;
+    height: 50px;
+}
+
+.boso1{
+    width: 120px;
+    height:60px;
+}
+.boso2{
+    width: 150px;
+    height:75px;
+}
+
+
+/*  classes para definir lado aleatório*/
+.ladoE{
+   transform: scaleX(1);  /* faz a mudança de lado da imagem no lado x */
+}
+.ladoD{
+    transform: scaleX(-1); 
+
+ }
+ .susto_ladoE{
+    transform: scaleX(1);  /* faz a mudança de lado da imagem no lado x */
+ }
+ .susto_ladoD{
+     transform: scaleX(-1); 
+ 
+  }
+
+  .img_vitoria{
+   width: 100%;
+
+  }
+
+ .painel{
+    position: absolute;
+    width: 190px;
+    padding: 10px;
+    bottom:0px ;
+    border-top: soli 1px white ;
+    background-color: white;
+    opacity: 0.7;
+    border: solid 5px black;
+ }
+
+ .vidas{
+    background-color: rgba(128, 128, 128, 0.591);
+    float: left;
+    padding: 5px;
+    margin-top: 43%;
+
+ }
+
+ .cronometro{
+    float: left ;
+    font-size: 20px;
+    font-weight: bold;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
